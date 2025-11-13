@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Timetable</title>
+  <style>
+    table { border-collapse: collapse; width: 100%; margin-top: 20px; }
+    th, td { border: 1px solid #333; padding: 8px; text-align: left; }
+    th { background-color: #f2f2f2; }
+    form label { display: block; margin: 5px 0; }
+    button { margin-right: 5px; }
+  </style>
+</head>
+<body>
+  <h1>Student Timetable</h1>
+
+  <form id="timetableForm">
+    <input type="hidden" id="courseId">
+    <label>Course Code: <input type="text" id="courseCode" required></label>
+    <label>Course Name: <input type="text" id="courseName" required></label>
+    <button type="submit">Save</button>
+    <button type="button" id="cancelEdit" style="display:none;">Cancel</button>
+  </form>
+
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Course Code</th>
+        <th>Course Name</th>
+        <th>Created At</th>
+        <th>Updated At</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody id="timetableBody"></tbody>
+  </table>
+
+  <script src="app.js"></script>
+</body>
+</html>
+
+
